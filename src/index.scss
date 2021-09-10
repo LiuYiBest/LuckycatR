@@ -1,3 +1,4 @@
+
 @import-normalize ;
 @import "helper";
 * {margin: 0;padding: 0;}
@@ -16,6 +17,9 @@ body {
 }
 button{
   font-family: inherit;
+}
+:focus{
+  outline: none;
 }
 .icon {
   width: 1em;
