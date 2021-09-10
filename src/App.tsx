@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {HashRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 import Money from './views/Money';
@@ -19,7 +20,7 @@ function App() {
                     <Route exact path="/tags">
                         <Tags/>
                     </Route>
-                    <Route exact path="/tags/:tag">
+                    <Route exact path="/tags/:id">
                         <Tag/>
                     </Route>
                     <Route exact path="/money">
