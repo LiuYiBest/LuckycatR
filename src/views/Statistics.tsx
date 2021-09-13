@@ -63,8 +63,8 @@ function Statistics() {
                 </Header>
                 <div>
                     {records.map(r => {
-                        return <Item>
-                            <div className="tags oneLine">
+                        return <Item >
+                            <div className="tags oneLine"  >
                                 {r.tagIds
                                     .map(tagId => <span key={tagId}>{getName(tagId)}</span>)
                                     .reduce((result, span, index, array) =>
@@ -84,6 +84,5 @@ function Statistics() {
         </Layout>
     );
 }
-
 
 export default Statistics;
