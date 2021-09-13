@@ -1,5 +1,5 @@
 import Layout from '../components/Layout';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import {TagsSection} from './Money/TagsSection';
 import {CategorySection} from './Money/CategorySection';
@@ -23,7 +23,7 @@ const defaultFormData = {
 
 function Money() {
     const [selected, setSelected] = useState(defaultFormData);
-    const {records, addRecord} = useRecords();
+    const { addRecord} = useRecords();
     const onChange = (obj: Partial<typeof selected>) => {
         setSelected({...selected, ...obj});
     };
@@ -33,6 +33,13 @@ function Money() {
             setSelected(defaultFormData);
         }
     };
+    useEffect(() => {
+        setTimeout(() => {
+            console.log('时间到');
+            setSelected({...selected, amount: 1000});
+        }, 3000);
+        // eslint-disable-next-line
+    }, []);
     return (
         <MyLayout>
             <TagsSection value={selected.tagIds}
